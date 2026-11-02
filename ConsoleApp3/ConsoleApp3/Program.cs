@@ -7,8 +7,10 @@ namespace ConsoleApp3
         static void Main(string[] args)
         {
             Dog dog = new Dog("Rex", 2, "Alabay");
-            dog.Color = "Brawn";
-            Console.WriteLine($"{dog.Name}, {dog.Age}, {dog.Breed}, {dog.Color}");
+            dog.Color = "Brown";
+            Console.WriteLine($"{dog.Name}, {dog.Age}, {dog.Breed}, {dog.Color}, {dog.Energy}");
+
+            dog.Show();
         }
     }
 }
