@@ -6,14 +6,20 @@ namespace ConsoleApp5
     {
         static void Main(string[] args)
         {
-            Cat cat = new Cat();
-            cat.Sound();
+            List<Animal> animals = new List<Animal>();
+            animals.Add(new Cat());
+            animals.Add(new Dog());
+            animals.Add(new Fish());
+            animals.Add(new Bird());
 
-            Dog dog = new Dog();
-            dog.Sound();
+            Bird bird = new Bird();
+            bird.Sound();
+            bird.Sound(2);
 
-            Fish fish = new Fish();
-            fish.Sound();
+            foreach (Animal animal in animals)
+            {
+                animal.Sound();
+            }
         }
     }
 }
