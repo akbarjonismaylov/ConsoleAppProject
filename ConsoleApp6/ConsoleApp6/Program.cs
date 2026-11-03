@@ -7,6 +7,7 @@ namespace ConsoleApp6
         static void Main(string[] args)
         {
             List<User> user = new List<User>();
+
             user.Add(new Admin("Ali", "Valiyev"));
             user.Add(new Passenger("G'ani", "Ganiyev"));
 
