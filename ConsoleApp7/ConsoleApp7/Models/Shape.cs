@@ -8,5 +8,8 @@ public abstract class Shape
     {
         Console.WriteLine(Name);
     }
+
+    public abstract double GetArea();
+    
 }
 
