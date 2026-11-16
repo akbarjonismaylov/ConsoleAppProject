@@ -4,48 +4,20 @@
     {
         static void Main(string[] args)
         {
-            Dictionary<string, string> capitals = new Dictionary<string, string>();
+            Dictionary<string, string> userPinfl = new Dictionary<string, string>();
+            userPinfl.Add("10293847561029", "Akbarjon");
+            userPinfl.Add("12121212121212", "Inomjon");
 
-            capitals.Add("Uzbekistan", "Tashkent");
-            capitals.Add("China", "Beijing");
-            capitals["England"] = "London";
+            Console.Write("Pinfl kiriting > ");
+            string? pinfl = Console.ReadLine();
 
-           // Console.WriteLine(capitals["England"]);
-
-
-            foreach (var item in capitals)
+            if (pinfl != null && userPinfl.ContainsKey(pinfl))
             {
-                Console.WriteLine($"{item.Key} - {item.Value}");
+                Console.WriteLine($"Salom {userPinfl[pinfl]}!");
             }
 
-            Console.WriteLine();
+            else Console.WriteLine("Foydalanuvchi topilmadi");
 
-            foreach (string key in capitals.Keys)
-            {
-                Console.WriteLine(key);
-            }
-
-            Console.WriteLine();
-
-            foreach (string value in capitals.Values)
-            {
-                Console.WriteLine(value);
-            }
-
-            Console.WriteLine();
-            
-            if (capitals.ContainsKey("England"))
-            {
-                Console.WriteLine(capitals["England"]);
-            }
-
-            else
-            {
-                Console.WriteLine("Topilmadi");
-            }
-
-            capitals.Remove("China");
-            Console.WriteLine(capitals.Count);
         }
     }
 }
